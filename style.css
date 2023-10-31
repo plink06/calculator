@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+}
+.screen{
+    height: 100px;
+    width:400px;
+    background-color: cadetblue;
+    padding: 10px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+button{
+    margin: 0;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+}
