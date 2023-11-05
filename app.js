@@ -33,10 +33,7 @@ function operate(operatordingle,firstOperand, secondOperand){
 
 
 
-const clear = document.querySelector('#clear');
-clear.addEventListener('click',()=>{
-    screen.innerHTML = '';
-});
+
 let trigger = false;
 buttonC.addEventListener('click',function(e){
     const target = e.target;
@@ -55,9 +52,14 @@ buttonC.addEventListener('click',function(e){
         console.log(operator)
         console.log(firstNum)
         console.log(secondNum)
-        const res = operate(operator,parseInt(firstNum),parseInt(secondNum));
+        const res = operate(operator,parseFloat(firstNum),parseFloat(secondNum));
         screen.innerHTML = '';
         screen.innerHTML = res;
+    }else if(target.className == 'clear'){
+        screen.textContent = '';
+        firstNum = 0;
+        secondNum= 0;
+        trigger = false;
     }
 })
 
